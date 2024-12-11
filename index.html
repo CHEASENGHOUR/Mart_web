@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.esm.min.js"></script>
+
+  <link rel="stylesheet" href="/static/styles.css">
+  <script type="module" src="/static/main.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end" id="SearchCanvas">
+    <div class="offcanvas-header text-start d-block">
+      <button class=" btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h3 class=" text-warning">Search</h3>
+      <div class="input-group my-4">
+        <input type="text" class="form-control bg-white-gray border-0" placeholder="What are you looking for?">
+        <button class="btn btn-dark" type="button" id="button-addon2">Search</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="offcanvas offcanvas-end" id="CartCanvas">
+    <div class="offcanvas-header text-start d-block">
+      <button class=" btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class=" offcanvas-title d-flex justify-content-between">
+        <h3 class=" text-warning">Your Cart</h3>
+        <span class="badge bg-warning text-white rounded-pill fs-4">3</span>
+      </div>
+      <ul class="list-group my-4">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Growers cider</div>
+            <div class=" text-muted">Brief description</div>
+          </div>
+          <span class=" text-muted">$14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Fresh grapes</div>
+            <div class=" text-muted">Brief description</div>
+          </div>
+          <span class=" text-muted">$50</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Coca Cola</div>
+            <div class=" text-muted">Brief description</div>
+          </div>
+          <span class=" text-muted">$5</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class=" fs-6 text-muted">Total (USD)</div>
+          </div>
+          <span class=" fw-bolder text-muted">$69</span>
+        </li>
+      </ul>
+      <button type="submit" class=" btn btn-warning text-white w-100 fs-5 p-2">Continue to checkout</button>
+    </div>
+  </div>
+
+
+
+  <header>
+    <div class=" container-fluid">
+      <div class="row py-3 border-bottom">
+        <!-- logo -->
+        <div class="col-lg-3 col-sm-4 text-center text-sm-start">
+          <div class="main-logo">
+            <a href="#home">
+              <img src="/img/logo.png" alt="" class=" img-fluid">
+            </a>
+          </div>
+        </div>
+        <!-- Search bar lg -->
+        <div class="col-lg-5 d-lg-block d-none col-sm-6">
+          <div class="search-bar row bg-white-gray p-2 rounded-4 align-items-center ">
+            <div class="col-md-4">
+              <select name="" id="" class=" form-select bg-white-gray border-0">
+                <option value="" selected>All Categories</option>
+                <option value="">Coca Cola</option>
+                <option value="">Drink</option>
+                <option value="">Chocolate</option>
+              </select>
+            </div>
+            <div class=" col-md-7">
+              <input type="text" class=" form-control bg-white-gray border-0" placeholder="Search For More">
+            </div>
+            <div class=" col-1 fs-3 text-center">
+              <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-8 justify-content-center justify-content-sm-end d-flex align-items-center gap-5 mt-4 mt-sm-1">
+          <div class=" text-end d-xl-block d-none">
+            <span>For Support ?</span>
+            <h5>+855-68625866</h5>
+          </div>
+          <ul class=" list-unstyled d-flex gap-3">
+            <li class="icon-circle rounded-circle p-2 align-items-center d-flex justify-content-center">
+              <a href="#" class=" text-decoration-none">
+                <i class="fa-regular fa-user" style="color: #000000;"></i>
+              </a>
+            </li>
+            <li class="icon-circle rounded-circle p-2 align-items-center d-flex justify-content-center">
+              <a href="#" class="text-decoration-none">
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+              </a>
+            </li>
+            <li class="icon-circle rounded-circle p-2 d-lg-none align-items-center d-flex justify-content-center">
+              <a href="#" class=" text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#CartCanvas">
+                <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+              </a>
+            </li>
+            <li class="icon-circle rounded-circle p-2 d-lg-none align-items-center d-flex justify-content-center">
+              <a href="#" class=" text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#SearchCanvas">
+                <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="cart d-lg-block d-none">
+            <button type="button" class=" d-flex flex-column bg-transparent border-0 justify-content-end" data-bs-toggle="offcanvas" data-bs-target="#CartCanvas">
+              <span class=" text-muted">Your Cart</span>
+              <h5 class="fs-5">$1000000</h5>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="py-3 d-flex justify-content-center justify-content-sm-start">
+        <nav class=" navbar navbar-expand-md ">
+          <button class=" navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#categories">
+            <span class=" navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" id="categories">
+            <div class="offcanvas-header text-start d-block d-md-none">
+              <button class=" btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+              <select name="" id="" class="cc form-select border-0 me-5">
+                <option value="" selected>All Categories</option>
+                <option value="">Coca Cola</option>
+                <option value="">Drink</option>
+                <option value="">Chocolate</option>
+              </select>
+              <ul class=" navbar-nav gap-md-5 align-items-center list-group list-group-flush">
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Woman</a>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Men</a>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Kids</a>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Accessories</a>
+                </li>
+                <li class="bb nav-item dropdown border-bottom w-100">
+                  <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                    Pages
+                  </a>
+                
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">About Us</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Shop</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Single Product</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Cart</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Checkout</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Blog</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Single Post</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Styles</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Contect</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">Thanks You</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">My Account</a></li>
+                    <li><a class="dropdown-item fw-bolder" id="page-link" href="#">404 ERROR</a></li>
+                  </ul>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Brand</a>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#" class="nav-link">Sale</a>
+                </li>
+                <li class="bb nav-item border-bottom w-100">
+                  <a href="#blog" class="nav-link">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <section class=" py-3" style="background-image: url(/img/background-pattern.jpg);background-repeat:no-repeat;background-size:cover;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="benner-blocks">
+
+            <div class="block-1 ad">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-warning ball" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class=" bg-warning ball" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class=" bg-warning ball" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class=" bg-warning ball" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class=" bg-info-subtle d-flex flex-wrap flex-md-nowrap justify-content-between p-5">
+                      <div class="">
+                        <h1 class=" fw-light text-warning mt-3 mb-5">100% Netural</h1>
+                        <h1 class=" display-5 fw-medium varela">Fresh Smoothie & Summer Juice</h1>
+                        <p class=" text-muted" style="line-height: 30px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quidem corrupti</p>
+                        <button class=" btn btn-outline-dark px-4 py-3 mt-5">Shop Now</button>
+                      </div>
+                      <img src="/img/product-thumb-1.png" class=" img-fluid" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class=" bg-info-subtle d-flex justify-content-between p-5">
+                      <div class="">
+                        <h1 class=" fw-light text-warning mt-3 mb-5">100% Netural</h1>
+                        <h1 class=" display-5 fw-medium varela">Fresh Smoothie & Summer Juice</h1>
+                        <p class=" text-muted" style="line-height: 30px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quidem corrupti</p>
+                        <button class=" btn btn-outline-dark px-4 py-3 mt-5">Shop Now</button>
+                      </div>
+                      <img src="/img/product-thumb-1.png" class=" img-fluid" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class=" bg-info-subtle d-flex justify-content-between p-5">
+                      <div class="">
+                        <h1 class=" fw-light text-warning mt-3 mb-5">100% Netural</h1>
+                        <h1 class=" display-5 fw-medium varela">Fresh Smoothie & Summer Juice</h1>
+                        <p class=" text-muted" style="line-height: 30px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quidem corrupti</p>
+                        <button class=" btn btn-outline-dark px-4 py-3 mt-5">Shop Now</button>
+                      </div>
+                      <img src="/img/product-thumb-1.png" class=" img-fluid" alt="...">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class=" bg-info-subtle d-flex justify-content-between p-5">
+                      <div class="">
+                        <h1 class=" fw-light text-warning mt-3 mb-5">100% Netural</h1>
+                        <h1 class=" display-5 fw-medium varela">Fresh Smoothie & Summer Juice</h1>
+                        <p class=" text-muted" style="line-height: 30px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quidem corrupti</p>
+                        <button class=" btn btn-outline-dark px-4 py-3 mt-5">Shop Now</button>
+                      </div>
+                      <img src="/img/product-thumb-1.png" class=" img-fluid " alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-2 bg-success-subtle ad" style="background: url(/img/ad-image-1.png) no-repeat;background-position: bottom right">
+              
+            </div>
+            <div class="block-3 ad bg-warning-subtle" style="background: url(/img/ad-image-2.png) no-repeat;background-position: bottom right">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class=" d-flex flex-wrap justify-content-center justify-content-sm-between align-items-center mt-4">
+            <h1>Categories</h1>
+            <div class=" d-flex gap-2 align-items-center">
+              <a href="#" class=" nav-link me-4">View All Categories →</a>
+              <button class="btn bg-white-gray border-0 prev" id="drag">⫷</button>
+              <button class="btn bg-white-gray border-0 next" id="drag">⫸</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="category-carousel swiper">
+              <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+                <a href="index.html" class="nav-link swiper-slide-active category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & Veges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-bread-baguette.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Breads & Sweets</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-soft-drinks-bottle.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & Vege</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-wine-glass-bottle.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & es</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-animal-products-drumsticks.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & ge</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-bread-herb-flour.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & Ves</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruitseges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Frs & Veges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">FruitsVeges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title"> & Veges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruits & Veges</h3>
+                </a>
+                <a href="index.html" class="nav-link category-item swiper-slide">
+                  <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+                  <h3 class="category-title">Fruitses</h3>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-3 py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class=" d-flex flex-wrap justify-content-center justify-content-sm-between align-items-center mt-4">
+            <h1>Categories</h1>
+            <div class=" d-flex gap-2 align-items-center">
+              <a href="#" class=" nav-link me-4">View All Categories →</a>
+              <button class="btn bg-white-gray border-0 prev-brand" id="drag">⫷</button>
+              <button class="btn bg-white-gray border-0 next-brand" id="drag">⫸</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="newly-brand swiper">
+            <div class="p-3 swiper-wrapper">
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="brandly swiper-slide p-3">
+                <img src="/img/product-thumb-11.jpg" class=" img-fluid w-25 rounded-2" alt="">
+                <div class="title">
+                  <h1>Hello</h1>
+                  <p>Hello</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
